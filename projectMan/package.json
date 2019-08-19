@@ -1,0 +1,28 @@
+{
+  "name": "project-management",
+  "version": "1.0.0",
+  "description": "Another project management tool",
+  "main": "index.js",
+  "scripts": {
+    "standard": "standard --fix",
+    "start-dev": "nodemon -L index.js",
+    "initial-setup": "npm install && cd ./orm && sequelize db:create && npm run migrate && cd ..",
+    "migrate": "cd ./orm && sequelize db:migrate && cd .."
+  },
+  "author": "Guilherme Rodrigues de Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "sequelize-cli": "^5.5.0",
+    "standard": "^13.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.15.0"
+  }
+}

@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  api:
+    depends_on:
+      - db
+    build: 
+      context: ./projectMan
+      dockerfile: local.Dockerfile
+    container_name: api
+    command: npm run start-dev
+    volumes:
+      - ./projectMan:/app
+    ports:
+      - "3001:3001"
+
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    container_name: db
