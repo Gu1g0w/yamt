@@ -10,3 +10,5 @@ Ao iniciar os containers, a API não irá funcionar corretamente pois o banco de
 Para executar futuras migrations, basta executar `npm run migrate`.
 
 A imagem da API em NodeJS está executando o nodemon para desenvolvimento, então basta salvar algum arquivo que a aplicação será reiniciada.
+
+A porta que a aplicação escutará por padrão pe a 3001.
